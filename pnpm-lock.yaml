@@ -60,9 +60,19 @@ catalogs:
     '@iconify-json/carbon':
       specifier: ^1.2.14
       version: 1.2.14
+    '@iconify-json/logos':
+      specifier: ^1.2.10
+      version: 1.2.10
     '@iconify-json/twemoji':
       specifier: ^1.2.4
       version: 1.2.4
+    '@unocss/preset-icons':
+      specifier: ^66.5.10
+      version: 66.5.10
+  sdk:
+    '@atproto/api':
+      specifier: ^0.18.4
+      version: 0.18.4
 
 overrides:
   '@nuxt/devtools': ^3.0.0-beta.2
@@ -76,7 +86,7 @@ importers:
   .:
     dependencies:
       '@atproto/api':
-        specifier: ^0.18.4
+        specifier: catalog:sdk
         version: 0.18.4
     devDependencies:
       '@antfu/eslint-config':
@@ -86,7 +96,7 @@ importers:
         specifier: catalog:icons
         version: 1.2.14
       '@iconify-json/logos':
-        specifier: ^1.2.10
+        specifier: catalog:icons
         version: 1.2.10
       '@iconify-json/twemoji':
         specifier: catalog:icons
@@ -110,7 +120,7 @@ importers:
         specifier: catalog:build
         version: 66.5.4(magicast@0.3.5)(vite@7.1.12(jiti@2.6.1)(terser@5.39.0)(yaml@2.8.1))
       '@unocss/preset-icons':
-        specifier: ^66.5.10
+        specifier: catalog:icons
         version: 66.5.10
       '@vite-pwa/nuxt':
         specifier: catalog:build
@@ -11592,7 +11602,7 @@ snapshots:
       mlly: 1.8.0
       node-fetch-native: 1.6.7
       node-mock-http: 1.0.3
-      ofetch: 1.4.1
+      ofetch: 1.5.1
       ohash: 2.0.11
       pathe: 2.0.3
       perfect-debounce: 2.0.0
@@ -13154,7 +13164,7 @@ snapshots:
       h3: 1.15.4
       lru-cache: 10.4.3
       node-fetch-native: 1.6.7
-      ofetch: 1.4.1
+      ofetch: 1.5.1
       ufo: 1.6.1
     optionalDependencies:
       db0: 0.3.4

@@ -1,4 +1,6 @@
 import type { ModuleOptions } from '@vite-pwa/nuxt'
+// eslint-disable-next-line ts/ban-ts-comment
+// @ts-expect-error
 import process from 'node:process'
 import { appDescription, appName } from '../constants/index'
 

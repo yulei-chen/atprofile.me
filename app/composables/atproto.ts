@@ -1,4 +1,4 @@
-import { BskyAgent } from '@atproto/api'
+import { AtpAgent } from '@atproto/api'
 
 /**
  * Create and return BskyAgent instances
@@ -8,12 +8,12 @@ import { BskyAgent } from '@atproto/api'
  */
 export function useAtproto() {
   // Agent for app.bsky.* API
-  const bskyAgent = new BskyAgent({
+  const bskyAgent = new AtpAgent({
     service: 'https://public.api.bsky.app',
   })
 
   // Agent for com.atproto.repo.* API
-  const repoAgent = new BskyAgent({
+  const repoAgent = new AtpAgent({
     service: 'https://bsky.social',
   })
 
@@ -24,4 +24,3 @@ export function useAtproto() {
     repoAgent,
   }
 }
-
