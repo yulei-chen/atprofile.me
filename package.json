@@ -14,9 +14,13 @@
     "lint": "eslint .",
     "typecheck": "nuxt typecheck"
   },
+  "dependencies": {
+    "@atproto/api": "catalog:sdk"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:dev",
     "@iconify-json/carbon": "catalog:icons",
+    "@iconify-json/logos": "catalog:icons",
     "@iconify-json/twemoji": "catalog:icons",
     "@nuxt/devtools": "catalog:build",
     "@nuxt/eslint": "catalog:build",
@@ -24,6 +28,7 @@
     "@pinia/nuxt": "catalog:build",
     "@unocss/eslint-config": "catalog:build",
     "@unocss/nuxt": "catalog:build",
+    "@unocss/preset-icons": "catalog:icons",
     "@vite-pwa/nuxt": "catalog:build",
     "@vueuse/core": "catalog:frontend",
     "@vueuse/nuxt": "catalog:build",

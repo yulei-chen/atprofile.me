@@ -1,7 +1,7 @@
 <template>
-  <div text="xl gray4" m-5 flex="~ gap3" justify-center>
-    <NuxtLink i-carbon-campsite to="/" />
-    <a i-carbon-logo-github href="https://github.com/antfu/vitesse-nuxt3" target="_blank" />
+  <div text="xl gray-400" m-5 pt-20 flex="~ gap3" justify-center>
+    <!-- <NuxtLink i-carbon-campsite to="/" /> -->
+    <a i-carbon-code href="https://tangled.org/yuleichen.dev/atprofile.me" target="_blank" />
     <DarkToggle />
   </div>
 </template>
