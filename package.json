@@ -22,6 +22,7 @@
     "@iconify-json/carbon": "catalog:icons",
     "@iconify-json/logos": "catalog:icons",
     "@iconify-json/twemoji": "catalog:icons",
+    "@netlify/nuxt": "catalog:deploy",
     "@nuxt/devtools": "catalog:build",
     "@nuxt/eslint": "catalog:build",
     "@nuxtjs/color-mode": "catalog:build",

@@ -15,17 +15,17 @@ const online = useOnline()
         <div v-else text-gray:80>
           You're offline
         </div>
-        <!-- <template #fallback>
-          <div op50 italic>
+        <template #fallback>
+          <!-- <div op50 italic>
             <span animate-pulse>Loading...</span>
-          </div>
-        </template> -->
+          </div> -->
+        </template>
       </Suspense>
-      <!-- <template #fallback>
-        <div op50>
+      <template #fallback>
+        <!-- <div op50>
           <span animate-pulse>...</span>
-        </div>
-      </template> -->
+        </div> -->
+      </template>
     </ClientOnly>
 
     <div py-30>

@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
+    '@netlify/nuxt',
   ],
 
   devtools: {
@@ -73,7 +74,5 @@ export default defineNuxtConfig({
     },
   },
 
-  // eslint-disable-next-line ts/ban-ts-comment
-  // @ts-expect-error
   pwa,
 })
