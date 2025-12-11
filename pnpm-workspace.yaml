@@ -1,3 +1,7 @@
+catalogMode: prefer
+shellEmulator: true
+trustPolicy: no-downgrade
+
 packages: []
 
 catalogs:
@@ -9,7 +13,6 @@ catalogs:
     '@pinia/nuxt': ^0.11.3
     '@unocss/eslint-config': ^66.5.10
     '@unocss/nuxt': ^66.5.10
-    '@vite-pwa/nuxt': ^1.1.0
     '@vueuse/nuxt': ^14.1.0
     nuxt: ^4.2.2
     unocss: ^66.5.10
