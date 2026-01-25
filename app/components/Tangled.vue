@@ -1,58 +1,27 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
-interface TangledProfile {
-  uri: string
-  cid: string
-  value?: {
-    handle?: string
-    displayName?: string
-    [key: string]: any
-  }
-  [key: string]: any
-}
+import { computed } from 'vue'
 
 const { handle } = useHandle()
 const { setLoading } = useLoading()
-const { repoAgent } = useAtproto()
-const data = ref<TangledProfile | null>(null)
+const { hasCollection, fetchRepoDescription } = useRepo()
 
-async function fetchTangledProfile() {
-  setLoading('tangled', true)
+// Check if tangled collections exist using string matching
+const hasTangledData = computed(() => {
+  return hasCollection('sh.tangled')
+})
 
-  try {
-    const result = await repoAgent.com.atproto.repo.getRecord({
-      repo: handle.value,
-      collection: 'sh.tangled.actor.profile',
-      rkey: 'self',
-    })
-
-    if (result.data) {
-      data.value = {
-        uri: result.data.uri,
-        cid: result.data.cid || '',
-        value: result.data.value as any,
-      }
-    }
-    else {
-      data.value = null
-    }
-  }
-  finally {
-    setLoading('tangled', false)
-  }
-}
-
-watchEffect(() => {
+watchEffect(async () => {
   if (handle.value) {
-    fetchTangledProfile()
+    setLoading('tangled', true)
+    await fetchRepoDescription()
+    setLoading('tangled', false)
   }
 })
 </script>
 
 <template>
-  <template v-if="data?.value">
-    <!-- Only show when Tangled profile exists -->
+  <template v-if="hasTangledData">
+    <!-- Only show when Tangled collections exist -->
     <Card
       src="https://cdn.bsky.app/img/avatar/plain/did:plc:wshs7t2adsemcrrd4snkeqli/bafkreif6z53z4ukqmdgwstspwh5asmhxheblcd2adisoccl4fflozc3kva@jpeg"
       :description="handle || ''"
